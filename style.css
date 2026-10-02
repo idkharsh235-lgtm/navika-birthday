@@ -1,0 +1,370 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0a0a0a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome {
+    text-align: center;
+    padding: 40px;
+}
+
+.system {
+    color: #00ff88;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 60px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #aaaaaa;
+    margin-bottom: 30px;
+}
+
+button {
+    background: transparent;
+    color: #00ff88;
+    border: 1px solid #00ff88;
+    padding: 12px 25px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00ff88;
+    color: #000000;
+}
+
+
+/* DASHBOARD */
+
+.dashboard {
+    display: none;
+    text-align: center;
+    padding: 40px;
+}
+
+.dashboard h2 {
+    font-size: 45px;
+    letter-spacing: 4px;
+    margin: 20px 0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.menu button {
+    width: 280px;
+}
+
+
+/* MEMORY BANK */
+
+.memoryBank {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.memoryBank h2 {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.memoryCard {
+    border: 1px solid #00ff88;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.memoryCard h3 {
+    color: #00ff88;
+    margin-bottom: 10px;
+}
+
+.memoryCard p {
+    margin-bottom: 10px;
+}
+
+
+/* STOCK */
+
+.stockPage {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.stockPage h2 {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.stockCard {
+    border: 1px solid #00ff88;
+    padding: 30px;
+    margin: 25px 0;
+}
+
+.stockCard h3 {
+    font-size: 35px;
+    color: #00ff88;
+}
+
+.stockName {
+    margin-top: 10px;
+}
+
+.stockPrice {
+    font-size: 45px;
+    color: #00ff88;
+    margin: 20px 0;
+}
+
+.stockChange {
+    color: #00ff88;
+}
+
+.financialData {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.financialData p {
+    margin: 10px 0;
+}
+
+.advice {
+    font-size: 18px;
+}
+
+
+/* SECRET FILE */
+
+.secretPage {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.secretPage h2 {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.secretBox {
+    border: 1px solid #00ff88;
+    padding: 30px;
+    margin: 30px 0;
+    line-height: 1.8;
+}
+
+.secretBox h3 {
+    color: #00ff88;
+    margin-bottom: 20px;
+}
+
+
+/* BIRTHDAY */
+
+.birthdayPage {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    max-width: 700px;
+    margin: auto;
+
+    animation: birthdayAppear 0.8s ease;
+}
+
+.birthdayPage h2 {
+    font-size: 40px;
+    margin: 25px 0;
+
+    animation: birthdayGlow 1.5s infinite alternate;
+}
+
+.birthdayText {
+    color: #00ff88;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 30px 0;
+
+    animation: birthdayPulse 1.2s infinite alternate;
+}
+
+.birthdayPage h3 {
+    margin-top: 35px;
+    color: #00ff88;
+}
+
+
+/* BIRTHDAY ANIMATIONS */
+
+@keyframes birthdayAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes birthdayGlow {
+
+    from {
+        text-shadow: 0 0 5px #00ff88;
+    }
+
+    to {
+        text-shadow: 0 0 25px #00ff88;
+    }
+
+}
+
+@keyframes birthdayPulse {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+
+}
+
+
+/* CONFETTI */
+
+.confetti {
+    position: fixed;
+    top: -20px;
+    width: 10px;
+    height: 10px;
+    z-index: 99999;
+
+    animation: confettiFall 4s linear forwards;
+}
+
+@keyframes confettiFall {
+
+    from {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(110vh) rotate(720deg);
+    }
+
+}
+
+
+/* SECRET EASTER EGG */
+
+.secretEgg {
+    display: none;
+    text-align: center;
+    padding: 25px;
+    margin: 30px auto;
+    border: 1px solid #00ff88;
+    max-width: 500px;
+}
+
+.secretEgg h2 {
+    color: #00ff88;
+}
+
+
+/* PHONE VERSION */
+
+@media (max-width: 600px) {
+
+    .welcome,
+    .dashboard,
+    .memoryBank,
+    .stockPage,
+    .secretPage,
+    .birthdayPage {
+        width: 100%;
+        padding: 25px 18px;
+    }
+
+    h1 {
+        font-size: 38px;
+        letter-spacing: 3px;
+    }
+
+    .dashboard h2,
+    .memoryBank h2,
+    .stockPage h2,
+    .secretPage h2,
+    .birthdayPage h2 {
+        font-size: 30px;
+    }
+
+    .menu button {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .memoryCard {
+        padding: 18px;
+    }
+
+    .stockCard {
+        padding: 22px;
+    }
+
+    .stockPrice {
+        font-size: 38px;
+    }
+
+    .secretBox {
+        padding: 20px;
+    }
+
+    .birthdayText {
+        font-size: 23px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 11px 18px;
+    }
+
+}
